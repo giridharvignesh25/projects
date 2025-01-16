@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Portfolio - Giridhar Vignesh C </title>
     <div class="background"></div>
     <style>
     	html, body {
+    		
     		height: 100%;
-    		margin: 0;
+    		margin:0;
+    		overflow: hidden;
 	}
 	
 	.background {
@@ -48,37 +50,49 @@
 	    	transition: bottom 1s ease-in-out;
 	}
         
-	header {
-	    position: relative;
-	    
-	    top: -100%; 
-	    width: 100%;
-	    background-color: rgba(0, 0, 0, 0.8);
-	    color: white;
-	    align-items: center; 
-	    transition: top 1s ease-in-out; 
-	    z-index: 1000;
-	    display: grid;
-	    grid-template-columns: 1fr auto;
-	    height:200px;
-	}
-	header .details{
-		 margin:30px 50px;
-		 font-size:18px;
-	}
+        header {
+            position: relative;
+            top: -100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr auto;
+            align-items: center;
+            transition: top 1s ease-in-out;
+            z-index: 1000;
+            height: auto;
+            padding: 20px;
+        }
+
+        header .details {
+            margin-left: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(1.8rem, 3vw, 3rem);
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1.2rem;
+        }
+
         header img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 2px solid #007acc;
-            margin:30px 50px;
+            border: 3px solid #007acc;
+            margin-right: 50px;
         }
-        header h1 {
-            margin: 10px 0 5px;
-        }
+
         header.active {
-    		top: 0; 
-	}
+            top: 0;
+        }
+
 	footer.active1 {
     		bottom: 0; 
 	}
@@ -101,11 +115,12 @@
 	    font-weight: bold;
 	    border-radius: 15px; /* Individual box roundness */
 	    transition: background 0.3s ease;
+	    margin: 5px auto;
 	}
         
         section {
         	display: none;
-        	padding: 20px;
+        	padding: 25px;
             margin: 20px auto;
             max-width: 800px;
             background: rgba(255, 255, 255, 0.9);
@@ -154,6 +169,7 @@
         <a href="#" data-target="projects">Projects</a>
         <a href="#" data-target="experience">Experience</a>
         <a href="#" data-target="education">Education</a>
+        <a href="#" data-target="certifications">Certifications</a>
         <a href="#" data-target="contact">Contact</a>
     </nav>
     </div>
@@ -211,12 +227,23 @@
                 <li><strong>AISSE (10th):</strong> Velammal Bodhi Residential School, Madurai (2018 - 2019) - Percentage: 80.4%</li>
             </ul>
         </section>
+	
+	<section id="certifications">
+	    <h2>Certifications</h2>
+	    <ul>
+		<li><strong>IoT Fundamentals:</strong> Cisco Networking Academy - 2024</li>
+		<li><strong>Python for Data Science:</strong> NPTEL - 2023</li>
+		<li><strong>Embedded Systems Programming:</strong> Coursera - 2024</li>
+		<li><strong>Advanced PCB Design:</strong> Altium Academy - 2024</li>
+		<li><strong>Ethical Hacking Fundamentals:</strong> Udemy - 2023</li>
+	    </ul>
+	</section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: giridharvignesh@gmail.com</p>
+            <p>Email: <a href="mailto:giridharvignesh@gmail.com">giridharvignesh@gmail.com</a></p>
             <p>Phone: +91-8072107350</p>
-            <a href="#" class="btn">Download Resume</a>
+            <a href="https://raw.githubusercontent.com/username/repository/branch/resume.pdf" class="btn" download>Download Resume</a>
         </section>
     </main>
 
