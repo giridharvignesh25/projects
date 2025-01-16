@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Giridhar Vignesh C </title>
+    <div class="background"></div>
+    <style>
+    	html, body {
+    		height: 100%;
+    		margin: 0;
+	}
+	
+	.background {
+           	position: absolute;
+           	height: 100%;
+           	width: 100%;
+           	background: #000 url('photo_bg.jpg') repeat;
+    	 	background-size: cover;
+          	background-position: center;
+          	filter: blur(5px);
+           	z-index: -1;
+        }
+        
+	body {
+    		display: flex;
+	    	flex-direction: column;
+	    	justify-content: space-between; 
+	    	font-family: Arial, sans-serif;
+	    	color: #333;
+	}
+
+	main {
+	    	flex: 1;
+	    	padding-top: 0px;
+	}
+	#projects {
+		text-align:justify;
+	}
+	footer {
+		text-align: center;
+		padding: 5px;
+		background: rgba(0, 0, 0, 0.8);
+		color: white;
+		position: relative;  
+		bottom: -100%;           
+	    	width: 100%;
+	    	transition: bottom 1s ease-in-out;
+	}
+        
+	header {
+	    position: relative;
+	    
+	    top: -100%; 
+	    width: 100%;
+	    background-color: rgba(0, 0, 0, 0.8);
+	    color: white;
+	    align-items: center; 
+	    transition: top 1s ease-in-out; 
+	    z-index: 1000;
+	    display: grid;
+	    grid-template-columns: 1fr auto;
+	    height:200px;
+	}
+	header .details{
+		 margin:30px 50px;
+		 font-size:18px;
+	}
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #007acc;
+            margin:30px 50px;
+        }
+        header h1 {
+            margin: 10px 0 5px;
+        }
+        header.active {
+    		top: 0; 
+	}
+	footer.active1 {
+    		bottom: 0; 
+	}
+        .nav-container {
+	    display: flex;
+	    justify-content: center;
+	    gap: 10px; 
+	    background: none;
+	    padding: 10px 0;
+	    border-radius: 30px; 
+	    overflow: hidden; 
+	}
+
+	nav a {
+	    display: inline-block;
+	    padding: 10px 20px;
+	    background: white;
+	    color: #007acc;
+	    text-decoration: none;
+	    font-weight: bold;
+	    border-radius: 15px; /* Individual box roundness */
+	    transition: background 0.3s ease;
+	}
+        
+        section {
+        	display: none;
+        	padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style: square;
+            padding-left: 20px;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #005f99;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        
+        <div class="details" style="grid-column: 1;">
+		<h1>Giridhar Vignesh C</h1>
+		<p>Electronics Engineer</p>
+    	</div>
+    <div class="nav-container" style="grid-column: 2;">
+    <nav>
+        <a href="#" data-target="about">About</a>
+        <a href="#" data-target="skills">Skills</a>
+        <a href="#" data-target="projects">Projects</a>
+        <a href="#" data-target="experience">Experience</a>
+        <a href="#" data-target="education">Education</a>
+        <a href="#" data-target="contact">Contact</a>
+    </nav>
+    </div>
+    	<img src="photo.jpeg" alt="Profile Picture" style="grid-column: 3;">
+    
+    
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Highly motivated Electronics and Communication Engineer skilled in C/C++, Python, embedded hardware, and IoT systems. Experienced in Linux-based development, PCB design, and delivering innovative solutions. Passionate about working on impactful projects that drive organizational success.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> C, C++, Python, Embedded C</li>
+                <li><strong>Embedded Systems:</strong> IoT solutions, embedded hardware, Linux-based development</li>
+                <li><strong>Communication Protocols:</strong> I2C, MQTT, TCP/IP, MODBUS</li>
+                <li><strong>Data Structures & Algorithms:</strong> Proficient in C</li>
+                <li><strong>Operating Systems:</strong> Linux, Unix, Windows</li>
+                <li><strong>Soft Skills:</strong> Communication, teamwork, and problem-solving</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ol>
+                <li><strong>4G-Based Data Collection Nodes for Water Pressure Monitoring in Urban DMA:</strong> Developed a 4G/LTE IoT system using Raspberry Pi and SIM7670, designed PCB, and implemented cloud integration using MQTT and HTTP protocols.</li>
+                <li><strong>Smart Shopping Cart:</strong> Automated checkout and inventory management with a mobile app for real-time product scanning and cost calculation.</li>
+                <li><strong>IoT-Based Smart Energy and Home Automation System:</strong> Enabled remote control and energy optimization through a web interface.</li>
+                <li><strong>Mobile-App Controlled RFID and Bluetooth-Enabled Line Following Robot:</strong> Designed a robot controlled via mobile app for navigation and efficient processing.</li>
+                <li><strong>IoT-Integrated Automatic Plant Irrigation:</strong> Automated plant watering with cloud-based monitoring and control, optimizing water usage and crop yield.</li>
+            </ol>
+        </section>
+
+        <section id="experience">
+            <h2>Internship Experience</h2>
+            <p><strong>Indian Institute of Technology, Kharagpur</strong> (June 2024 - August 2024)</p>
+            <ol>
+                <li>Embedded programming and Linux-based development</li>
+                <li>Communication protocols: MQTT, FTP, I2C, MODBUS</li>
+                <li>PCB and schematics design</li>
+                <li>Project: 4G-based data collection nodes for water pressure monitoring in urban DMA</li>
+            </ol>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>B.E (ECE):</strong> K.L.N College of Engineering, Madurai (2021 - 2025) - CGPA: 8.52</li>
+                <li><strong>AISSCE (12th):</strong> Velammal Bodhi Residential School, Madurai (2020 - 2021) - Percentage: 81.8%</li>
+                <li><strong>AISSE (10th):</strong> Velammal Bodhi Residential School, Madurai (2018 - 2019) - Percentage: 80.4%</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: giridharvignesh@gmail.com</p>
+            <p>Phone: +91-8072107350</p>
+            <a href="#" class="btn">Download Resume</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Giridhar Vignesh C. All Rights Reserved.</p>
+    </footer>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.getElementById(this.getAttribute('data-target'));
+                    document.querySelectorAll('main section').forEach(section => section.style.display = 'none');
+                    if (target) {
+                        target.style.display = 'block';
+                    }
+                });
+            });
+
+            // Simulate a delay before activating the sliding animation for the header
+            setTimeout(() => {
+                document.querySelector('header').classList.add('active');
+                document.querySelector('footer').classList.add('active1');
+            }, 100); // Delay of 100ms before activating the animation
+        });
+    	</script>
+</body>
+</html>
